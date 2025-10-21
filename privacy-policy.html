@@ -53,6 +53,7 @@
     <div class="container">
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last Updated: October 21, 2025</p>
+        <p><strong>Effective Date:</strong> October 21, 2025</p>
 
         <p>Browsist AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
 
@@ -61,25 +62,28 @@
         <h3>1.1 Personal Information</h3>
         <p>We collect the following personal information:</p>
         <ul>
-            <li><strong>Account Information:</strong> Email address, name (when you create an account)</li>
-            <li><strong>Authentication Data:</strong> Google account information (if using Google Sign-In)</li>
-            <li><strong>Payment Information:</strong> Subscription details, payment history (processed securely via Google Play Billing)</li>
+            <li><strong>Account Information:</strong> Email address, name, password (encrypted)</li>
+            <li><strong>Authentication Data:</strong> Google account information (name, email, profile picture) if using Google Sign-In</li>
+            <li><strong>Device Information:</strong> Android Device ID (ANDROID_ID) for account management and security</li>
+            <li><strong>Payment Information:</strong> Subscription plan, purchase tokens, payment history (processed via Google Play Billing - we do NOT store credit card details)</li>
         </ul>
 
         <h3>1.2 Usage Information</h3>
         <ul>
-            <li><strong>Chat History:</strong> Your conversations with AI assistants (stored locally on your device and optionally synced to our servers)</li>
-            <li><strong>Browsing Activity:</strong> URLs visited within the app, search queries</li>
-            <li><strong>Usage Statistics:</strong> Message count, image generation count, feature usage</li>
-            <li><strong>Device Information:</strong> Device model, OS version, app version</li>
-            <li><strong>Crash Reports:</strong> Error logs and diagnostics for app stability</li>
+            <li><strong>Chat History:</strong> Your conversations with AI models (stored locally in encrypted Room database on your device, optionally synced to MongoDB cloud servers with your consent)</li>
+            <li><strong>Browsing Activity:</strong> URLs visited within the app browser, web search queries</li>
+            <li><strong>Usage Statistics:</strong> Message count per model, image generation count, subscription quota tracking</li>
+            <li><strong>Device Technical Data:</strong> Device model, Android OS version, app version, network status</li>
+            <li><strong>User Preferences:</strong> Selected AI model, temperature, max tokens, research mode settings (stored in encrypted DataStore)</li>
+            <li><strong>Session Data:</strong> Last login timestamp, authentication tokens (JWT, expires after 7 days)</li>
         </ul>
 
         <h3>1.3 Content You Provide</h3>
         <ul>
-            <li><strong>Text Input:</strong> Messages and prompts sent to AI models</li>
-            <li><strong>Voice Input:</strong> Audio recordings for voice-to-text (processed and deleted immediately)</li>
-            <li><strong>Images/Files:</strong> Photos and documents uploaded for AI analysis (optional)</li>
+            <li><strong>Text Input:</strong> Messages, prompts, and questions sent to AI models</li>
+            <li><strong>Voice Input:</strong> Audio recordings for voice-to-text conversion (processed in real-time and immediately discarded - NOT stored)</li>
+            <li><strong>Images:</strong> Photos uploaded for AI vision analysis (temporarily processed, not permanently stored unless in chat history)</li>
+            <li><strong>Documents:</strong> PDFs and Word documents for AI document analysis (text extracted, originals not stored, max 20MB)</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
@@ -98,15 +102,20 @@
         <h2>3. Information Sharing & Third-Party Services</h2>
         
         <h3>3.1 AI Service Providers</h3>
+        <p><strong>⚠️ IMPORTANT:</strong> Your messages are sent through our secure backend servers to these AI providers:</p>
         <ul>
-            <li><strong>OpenAI:</strong> Your messages are sent to OpenAI's GPT models for processing. See <a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a></li>
-            <li><strong>Google Gemini:</strong> Your messages may be processed by Google's AI models. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-            <li><strong>Google Imagen:</strong> Image generation requests processed by Google. Data handling per Google's policies</li>
+            <li><strong>OpenAI (GPT Models):</strong> We send your messages to OpenAI's GPT-3.5-turbo, GPT-4-turbo, and GPT-4 models for AI chat responses. Your API keys are NOT required - we handle this securely. OpenAI may use data per their policies. See <a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a></li>
+            <li><strong>Google Gemini AI:</strong> We send your messages to Google's Gemini-2.0-flash, Gemini-2.5-flash, and Gemini-2.5-pro models for AI responses. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>Google Imagen/Vertex AI:</strong> Image generation requests are sent to Google Imagen models. Prompts are processed to generate images. See <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">Google Cloud Privacy Notice</a></li>
+            <li><strong>DALL-E (OpenAI):</strong> Alternative image generation if configured. Subject to OpenAI policies</li>
         </ul>
+        <p><strong>Data Retention by AI Providers:</strong> OpenAI retains data for 30 days for abuse monitoring, then deletes it (per their API policy). Google's retention policies apply to Gemini/Imagen.</p>
 
-        <h3>3.2 Authentication</h3>
+        <h3>3.2 Authentication & Cloud Services</h3>
         <ul>
-            <li><strong>Google Sign-In:</strong> If you use Google Sign-In, we receive basic profile information (name, email). See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>Google Sign-In:</strong> If you use Google Sign-In, we receive basic profile information (name, email, profile picture). We verify your identity token with Google's servers. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>MongoDB Atlas:</strong> Your synced chat history and account data are stored on MongoDB Atlas cloud servers (encrypted at rest, located in US/India regions). See <a href="https://www.mongodb.com/legal/privacy-policy" target="_blank">MongoDB Privacy Policy</a></li>
+            <li><strong>Railway.app:</strong> Our backend API is hosted on Railway infrastructure. See <a href="https://railway.app/legal/privacy" target="_blank">Railway Privacy Policy</a></li>
         </ul>
 
         <h3>3.3 Payment Processing</h3>
@@ -114,15 +123,40 @@
             <li><strong>Google Play Billing:</strong> All subscription payments are processed by Google. We do not store your payment card details. See <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a></li>
         </ul>
 
-        <h3>3.4 We DO NOT sell your personal information to third parties.</h3>
+        <h3>3.4 Search Services (Optional)</h3>
+        <ul>
+            <li><strong>Serper API / Tavily Search:</strong> When using research mode, we may send search queries to third-party search APIs to find relevant sources. These services may log search queries per their policies.</li>
+        </ul>
+
+        <h3>3.5 We DO NOT:</h3>
+        <ul>
+            <li>❌ Sell your personal information to third parties</li>
+            <li>❌ Use your data for advertising purposes</li>
+            <li>❌ Share your chat content with anyone except the AI providers necessary for service functionality</li>
+            <li>❌ Track you across other websites or apps</li>
+            <li>❌ Use third-party analytics (no Google Analytics, Facebook Pixel, etc.)</li>
+        </ul>
 
         <h2>4. Data Storage & Security</h2>
         <ul>
-            <li><strong>Local Storage:</strong> Chat history stored on your device using encrypted Room database</li>
-            <li><strong>Cloud Storage:</strong> Optional cloud sync via secure MongoDB servers with encryption at rest</li>
-            <li><strong>Data Transmission:</strong> All data transmitted over HTTPS with TLS 1.2+</li>
-            <li><strong>Access Controls:</strong> JWT-based authentication, secure session management</li>
-            <li><strong>Data Retention:</strong> We retain data for as long as your account is active or as needed to provide services</li>
+            <li><strong>Local Storage:</strong> Chat history, user preferences stored on your device using:
+                <ul>
+                    <li>Room Database (encrypted, for chat messages and history)</li>
+                    <li>DataStore Preferences (encrypted, for settings and tokens)</li>
+                </ul>
+            </li>
+            <li><strong>Cloud Storage:</strong> Optional cloud sync (opt-in only):
+                <ul>
+                    <li>MongoDB Atlas servers (encryption at rest with AES-256)</li>
+                    <li>Data centers: US and India regions</li>
+                    <li>Automatic backups retained for 7 days</li>
+                </ul>
+            </li>
+            <li><strong>Data Transmission:</strong> All data transmitted over HTTPS with TLS 1.3+ encryption</li>
+            <li><strong>Authentication:</strong> JWT tokens (expires after 7 days), refresh token mechanism, bcrypt password hashing (12 salt rounds)</li>
+            <li><strong>Access Controls:</strong> Role-based access, rate limiting (1000 requests per 15 minutes), device-based authentication</li>
+            <li><strong>API Security:</strong> All backend APIs protected with JWT authentication, input validation, and SQL injection prevention</li>
+            <li><strong>No Analytics/Tracking:</strong> We do NOT use Google Analytics, Firebase Analytics, or any third-party tracking SDKs</li>
         </ul>
 
         <h2>5. Your Rights & Choices</h2>
@@ -138,14 +172,25 @@
 
         <h2>6. Data Retention</h2>
         <ul>
-            <li><strong>Account Data:</strong> Retained while your account is active</li>
-            <li><strong>Chat History:</strong> Stored indefinitely (locally) until you delete</li>
-            <li><strong>Usage Logs:</strong> Retained for 90 days for analytics and debugging</li>
-            <li><strong>Deleted Accounts:</strong> All data permanently deleted within 30 days</li>
+            <li><strong>Account Data:</strong> Retained while your account is active and for 30 days after account deletion</li>
+            <li><strong>Chat History (Local):</strong> Stored on your device until you manually delete conversations</li>
+            <li><strong>Chat History (Cloud):</strong> Synced chats stored on MongoDB Atlas, deleted within 30 days of account deletion</li>
+            <li><strong>Usage Statistics:</strong> Message and image counts reset monthly on your billing date</li>
+            <li><strong>Server Logs:</strong> Backend API logs retained for 30 days for debugging and security (contains timestamps, endpoints, status codes - NO chat content)</li>
+            <li><strong>Payment Records:</strong> Google Play Billing retains payment history per their policies (minimum 7 years for tax compliance)</li>
+            <li><strong>Voice Recordings:</strong> Processed in real-time and immediately deleted (0 retention)</li>
+            <li><strong>Uploaded Files:</strong> Temporarily stored in memory during processing, deleted immediately after (no permanent storage)</li>
+            <li><strong>Deleted Accounts:</strong> All personally identifiable data permanently deleted within 30 days. Aggregated anonymous usage statistics may be retained for product improvement.</li>
         </ul>
 
-        <h2>7. Children's Privacy</h2>
-        <p>Browsist AI is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we learn we have collected data from a child under 13, we will delete it immediately.</p>
+        <h2>7. Children's Privacy (COPPA Compliance)</h2>
+        <p><strong>Age Restriction:</strong> Browsist AI is not intended for children under 13 years of age (or under 16 in the European Economic Area).</p>
+        <ul>
+            <li>We do NOT knowingly collect personal information from children under 13</li>
+            <li>We do NOT target children with marketing or features</li>
+            <li>Parents/guardians: If you believe your child has provided us with personal information, contact us immediately at <a href="mailto:support@browsistai.com">support@browsistai.com</a></li>
+            <li>We will delete any data from children under 13 within 48 hours of notification</li>
+        </ul>
 
         <h2>8. International Data Transfers</h2>
         <p>Your data may be processed in countries outside your residence, including the United States and India. We ensure appropriate safeguards are in place for international transfers as required by GDPR and other data protection laws.</p>
@@ -169,13 +214,16 @@
             <li>Non-discrimination for exercising CCPA rights</li>
         </ul>
 
-        <h2>11. Cookies & Tracking</h2>
-        <p>We use minimal tracking technologies:</p>
+        <h2>11. Cookies & Tracking Technologies</h2>
+        <p><strong>Mobile App:</strong> Our Android app does NOT use cookies or browser tracking.</p>
+        <p><strong>Web Backend:</strong> Minimal use of cookies for backend authentication:</p>
         <ul>
-            <li><strong>Session Cookies:</strong> For authentication (essential)</li>
-            <li><strong>Analytics:</strong> Anonymous usage statistics (optional)</li>
-            <li><strong>No Advertising Cookies:</strong> We do not serve ads</li>
+            <li><strong>Authentication Tokens:</strong> JWT tokens stored in encrypted DataStore (essential for app functionality)</li>
+            <li><strong>NO Third-Party Cookies:</strong> We do not use advertising cookies, social media pixels, or analytics trackers</li>
+            <li><strong>NO Cross-Site Tracking:</strong> We do not track you across other websites or apps</li>
+            <li><strong>Web Browser Data:</strong> URLs you visit within the app's built-in browser are stored locally for history/bookmarks only</li>
         </ul>
+        <p><strong>Do Not Track:</strong> Our app respects "Do Not Track" browser signals (though not applicable to native Android apps).</p>
 
         <h2>12. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. We will notify you of material changes via:</p>
@@ -185,12 +233,16 @@
             <li>Updated "Last Modified" date</li>
         </ul>
 
-        <h2>13. Contact Us</h2>
+        <h2>13. Contact Us & Data Protection Officer</h2>
         <div class="contact">
             <p>If you have questions about this Privacy Policy or want to exercise your rights:</p>
             <p><strong>Email:</strong> <a href="mailto:support@browsistai.com">support@browsistai.com</a></p>
+            <p><strong>Privacy Inquiries:</strong> <a href="mailto:privacy@browsistai.com">privacy@browsistai.com</a></p>
+            <p><strong>Data Deletion Requests:</strong> <a href="mailto:privacy@browsistai.com">privacy@browsistai.com</a></p>
             <p><strong>Website:</strong> <a href="https://browsistai.com">https://browsistai.com</a></p>
-            <p><strong>Response Time:</strong> We will respond to requests within 30 days</p>
+            <p><strong>Developer:</strong> BMT Creations</p>
+            <p><strong>Response Time:</strong> We will respond to requests within 30 days (EU: 1 month, California: 45 days)</p>
+            <p><strong>Mailing Address:</strong> (Add your registered business address if required for your jurisdiction)</p>
         </div>
 
         <hr style="margin-top: 50px; border: none; border-top: 1px solid #ddd;">
