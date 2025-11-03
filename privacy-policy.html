@@ -130,7 +130,7 @@
         <h2>4. Information Sharing & Third-Party Services</h2>
         
         <h3>4.1 AI Service Providers</h3>
-        <p><strong>⚠️ IMPORTANT:</strong> Your messages are sent through our secure backend servers to these AI providers:</p>
+        <p><strong>IMPORTANT:</strong> Your messages are sent through our secure backend servers to these AI providers:</p>
         <ul>
             <li><strong>OpenAI (GPT Models):</strong> We send your messages to OpenAI's GPT-3.5-turbo, GPT-4-turbo, and GPT-4 models for AI chat responses. Your API keys are NOT required - we handle this securely. OpenAI may use data per their policies. See <a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a></li>
             <li><strong>Google Gemini AI:</strong> We send your messages to Google's Gemini-2.0-flash, Gemini-2.5-flash, and Gemini-2.5-pro models for AI responses. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
@@ -160,11 +160,11 @@
         
         <h3>4.5 We DO NOT:</h3>
         <ul>
-            <li>❌ Sell your personal information to third parties</li>
-            <li>❌ Use your data for advertising purposes</li>
-            <li>❌ Share your chat content with anyone except the AI providers necessary for service functionality</li>
-            <li>❌ Track you across other websites or apps</li>
-            <li>❌ Use third-party analytics (no Google Analytics, Facebook Pixel, etc.)</li>
+            <li>Sell your personal information to third parties</li>
+            <li>Use your data for advertising purposes</li>
+            <li>Share your chat content with anyone except the AI providers necessary for service functionality</li>
+            <li>Track you across other websites or apps</li>
+            <li>Use third-party analytics (no Google Analytics, Facebook Pixel, etc.)</li>
         </ul>
 
         <h2>5. Data Storage & Security</h2>
@@ -203,6 +203,7 @@
         <h2>7. Data Retention</h2>
         <p>We retain your personal information for as long as your account is active. Upon account deletion, most data is removed within 30 days.</p>
         
+        <h3>7.1 Standard Data Retention</h3>
         <ul>
             <li><strong>Account Data:</strong> Retained while your account is active and for 30 days after account deletion</li>
             <li><strong>Chat History (Local):</strong> Stored on your device until you manually delete conversations</li>
@@ -214,15 +215,46 @@
             <li><strong>Uploaded Files:</strong> Temporarily stored in memory during processing, deleted immediately after (no permanent storage)</li>
         </ul>
         
-        <p><strong>Anti-Abuse Data Retention:</strong> For security and anti-abuse purposes, we retain certain anonymized identifiers (email address and Google ID) in a secure, encrypted database after account deletion. This prevents malicious users from repeatedly creating and deleting accounts to abuse our services. This data is:</p>
+        <h3>7.2 Data Retention After Account Deletion</h3>
+        <p><strong>IMPORTANT DISCLOSURE:</strong> When you delete your account, we retain limited information for fraud prevention and service security purposes.</p>
+        
+        <p><strong>What We Retain After Account Deletion:</strong></p>
         <ul>
-            <li>Stored in anonymized form without association to your personal information</li>
-            <li>Used exclusively for security and fraud prevention</li>
-            <li>Not used for marketing or any other purposes</li>
-            <li>Retained indefinitely to maintain the integrity of our anti-abuse systems</li>
+            <li><strong>Email Address:</strong> Your email address is retained in our DeletedUser database</li>
+            <li><strong>Google Account ID:</strong> If you signed in with Google, your Google ID is retained</li>
+            <li><strong>Account ID:</strong> Your original account identifier (MongoDB ObjectId)</li>
+            <li><strong>Deletion Timestamp:</strong> Date and time when your account was deleted</li>
+            <li><strong>Usage Statistics at Deletion:</strong> Message count and image generation count at the time of deletion</li>
+            <li><strong>Subscription Information at Deletion:</strong> Your subscription plan and status at the time of deletion</li>
         </ul>
         
-        <p>Except for the anti-abuse identifiers mentioned above, anonymized usage statistics may be retained for service improvement.</p>
+        <p><strong>Purpose of Retention:</strong></p>
+        <ul>
+            <li><strong>Fraud Prevention:</strong> Prevents abuse of our free tier service by users creating multiple accounts</li>
+            <li><strong>Security:</strong> Blocks re-registration attempts from deleted accounts (default policy)</li>
+            <li><strong>Compliance:</strong> Maintains audit trail for regulatory and legal requirements</li>
+        </ul>
+        
+        <p><strong>How This Data Is Used:</strong></p>
+        <ul>
+            <li>Stored in a separate, secure DeletedUser database collection</li>
+            <li>Used exclusively to check registration eligibility when new users sign up</li>
+            <li>NOT used for marketing, analytics, or any other purposes</li>
+            <li>NOT shared with third parties</li>
+            <li>Retained indefinitely to maintain service integrity and prevent abuse</li>
+        </ul>
+        
+        <p><strong>Re-Registration Policy:</strong></p>
+        <ul>
+            <li>By default, deleted accounts cannot re-register with the same email or Google account</li>
+            <li>This prevents abuse where users repeatedly create accounts to exploit free usage limits</li>
+            <li>If you wish to restore your account or request complete data removal (including DeletedUser records), contact us at <a href="mailto:support@browsistai.com">support@browsistai.com</a></li>
+            <li>Account restoration or complete data removal requests are reviewed on a case-by-case basis</li>
+        </ul>
+        
+        <p><strong>Your Rights Regarding Retained Data:</strong> You have the right to request complete removal of your information from our DeletedUser database. Please contact us at <a href="mailto:support@browsistai.com">support@browsistai.com</a> with the subject line "Complete Data Removal Request." We will process such requests within 30 days and may ask for identity verification to prevent fraudulent requests.</p>
+        
+        <p>Except for the deletion records mentioned above, anonymized usage statistics may be retained for service improvement.</p>
 
         <h2>8. Children's Privacy (COPPA Compliance)</h2>
         <p><strong>Age Restriction:</strong> Browsist AI is not intended for children under 13 years of age (or under 16 in the European Economic Area).</p>
