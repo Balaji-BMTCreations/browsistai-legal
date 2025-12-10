@@ -54,6 +54,7 @@
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last Updated: December 4, 2025</p>
         <p><strong>Effective Date:</strong> December 4, 2025</p>
+        <p><em>Version 1.1 - Added Built-in Browser Privacy Features section</em></p>
 
         <p>Browsist AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
 
@@ -76,7 +77,7 @@
             <li><strong>Device Technical Data:</strong> Device model, Android OS version, app version, network status</li>
             <li><strong>User Preferences:</strong> Selected AI model, temperature, max tokens, research mode settings (stored in encrypted DataStore)</li>
             <li><strong>Session Data:</strong> Last login timestamp, authentication tokens (JWT, expires after 7 days)</li>
-            <li><strong>IP Address & Location Data:</strong> When you use Research Mode, we automatically collect your IP address to determine your approximate location (country and city) for providing geographically relevant search results. This helps deliver localized content such as regional news, nearby businesses, and location-appropriate search results. IP-based location data is cached temporarily (24 hours) for performance optimization and is not permanently stored in our database.</li>
+            <li><strong>IP Address & Location Data (PRO/PREMIUM only):</strong> When you use Research Mode (available only with PRO or PREMIUM subscription), we automatically collect your IP address to determine your approximate location (country and city) for providing geographically relevant search results. This helps deliver localized content such as regional news, nearby businesses, and location-appropriate search results. IP-based location data is cached temporarily (24 hours) for performance optimization and is not permanently stored in our database.</li>
         </ul>
 
         <h3>1.3 Content You Provide</h3>
@@ -91,8 +92,8 @@
         <p>Browsist AI provides a comprehensive suite of AI-powered features:</p>
         <ul>
             <li><strong>AI Chat Assistant:</strong> Conversational AI with multiple models (OpenAI GPT, Google Gemini)</li>
-            <li><strong>Research Mode:</strong> AI chat enhanced with real-time web search and credible sources with images</li>
-            <li><strong>Built-in Browser:</strong> Integrated web browser with seamless navigation</li>
+            <li><strong>Research Mode (PRO/PREMIUM only):</strong> AI chat enhanced with real-time web search and credible sources with images. This feature requires an active PRO or PREMIUM subscription.</li>
+            <li><strong>Built-in Browser:</strong> Integrated web browser with seamless navigation, ad blocking, and privacy features</li>
             <li><strong>Browser AI Summarization:</strong> Instant webpage summaries (Quick, Detailed, Key Points, Action Items) with metadata</li>
             <li><strong>My Notes:</strong> Personal note-taking and organization system</li>
             <li><strong>AI Image Generation:</strong> Text-to-image creation using advanced AI models (Google Imagen, DALL-E)</li>
@@ -100,6 +101,17 @@
             <li><strong>Voice Input:</strong> Speech-to-text capabilities for hands-free interaction</li>
             <li><strong>Document Analysis:</strong> AI-powered analysis of PDFs, Word documents, and images</li>
             <li><strong>Multi-Device Sync:</strong> Optional cloud synchronization of chat history</li>
+        </ul>
+        
+        <h3>2.1 Built-in Browser Privacy Features</h3>
+        <p>Our integrated browser includes the following privacy and functionality features:</p>
+        <ul>
+            <li><strong>Ad Blocking:</strong> Optional ad blocking feature that prevents loading of known advertising and tracking domains. You can enable or disable this in browser settings. When enabled, requests to advertising networks are blocked locally on your device - no data is sent to us about blocked ads.</li>
+            <li><strong>User Agent:</strong> To ensure optimal website compatibility, our browser may present itself as a standard mobile or desktop browser (Chrome/Firefox) rather than an Android WebView. This is a common practice to prevent websites from serving limited functionality to in-app browsers. No personal information is transmitted through this identification.</li>
+            <li><strong>Website Cookies:</strong> Websites you visit within our browser may set their own cookies. These cookies are stored locally on your device and are subject to each website's own privacy policy. You can clear browsing data including cookies in the browser settings.</li>
+            <li><strong>Desktop Mode:</strong> You can toggle between mobile and desktop viewing modes. In desktop mode, the browser identifies as a desktop browser to receive the full desktop version of websites.</li>
+            <li><strong>Browsing History:</strong> Your browsing history is stored locally on your device for your convenience. History is NOT synced to our servers and is NOT shared with third parties. You can clear your history at any time.</li>
+            <li><strong>Bookmarks:</strong> Saved bookmarks are stored locally on your device and optionally synced to your account if cloud sync is enabled.</li>
         </ul>
         
         <h2>3. How We Use Your Information</h2>
@@ -154,10 +166,10 @@
 
         <h3>4.4 Search & Webpage Services</h3>
         <ul>
-            <li><strong>Serper API / Tavily Search:</strong> When using Research Mode, your search queries and approximate location (country and city derived from IP address) are sent to third-party search APIs (Serper, Tavily) to provide geographically relevant web sources and images. Only your query and location parameters (country code, city name) are shared - no personal identifiers are sent.</li>
-            <li><strong>IP Geolocation Services:</strong> We use third-party IP geolocation services (ip-api.com, ipapi.co) to determine your approximate location from your IP address. These services receive only your IP address and return location data (country, city, region). See their privacy policies: <a href="https://ip-api.com/docs/legal" target="_blank">ip-api.com</a>, <a href="https://ipapi.co/privacy" target="_blank">ipapi.co</a></li>
-            <li><strong>Webpage Content Extraction:</strong> For Browser AI Summarization, webpage content is extracted and sent to AI providers (OpenAI/Google) for summarization</li>
-            <li><strong>Trending Topics API:</strong> Real-time trending topic data fetched from external news and social media APIs</li>
+            <li><strong>Serper API / Tavily Search (PRO/PREMIUM only):</strong> When using Research Mode (available only with PRO or PREMIUM subscription), your search queries and approximate location (country and city derived from IP address) are sent to third-party search APIs (Serper, Tavily) to provide geographically relevant web sources and images. Only your query and location parameters (country code, city name) are shared - no personal identifiers are sent. FREE plan users do not have access to Research Mode and their data is not shared with these services.</li>
+            <li><strong>IP Geolocation Services (PRO/PREMIUM only):</strong> We use third-party IP geolocation services (ip-api.com, ipapi.co) to determine your approximate location from your IP address when you use Research Mode. These services receive only your IP address and return location data (country, city, region). This only applies to PRO and PREMIUM subscribers using Research Mode. See their privacy policies: <a href="https://ip-api.com/docs/legal" target="_blank">ip-api.com</a>, <a href="https://ipapi.co/privacy" target="_blank">ipapi.co</a></li>
+            <li><strong>Webpage Content Extraction:</strong> For Browser AI Summarization (available to all users), webpage content is extracted and sent to AI providers (OpenAI/Google) for summarization</li>
+            <li><strong>Trending Topics API:</strong> Real-time trending topic data fetched from external news and social media APIs (available to all users)</li>
         </ul>
         
         <h3>4.5 We DO NOT:</h3>
@@ -200,7 +212,7 @@
             <li><strong>Export:</strong> Download your chat history and data</li>
             <li><strong>Opt-Out:</strong> Disable cloud sync, analytics collection</li>
             <li><strong>Subscription:</strong> Cancel subscription anytime via Google Play</li>
-            <li><strong>Opt-Out of Location-Based Search:</strong> You can disable location-based search results by turning off Research Mode in the app settings, or by using a VPN to mask your IP address. When Research Mode is disabled, your IP address is not used for geolocation lookups.</li>
+            <li><strong>Opt-Out of Location-Based Search (PRO/PREMIUM only):</strong> If you have a PRO or PREMIUM subscription, you can disable location-based search results by turning off Research Mode in the app settings, or by using a VPN to mask your IP address. When Research Mode is disabled, your IP address is not used for geolocation lookups. FREE plan users do not have access to Research Mode and no location-based searches are performed.</li>
         </ul>
 
         <h2>7. Data Retention</h2>
@@ -216,7 +228,7 @@
             <li><strong>Payment Records:</strong> Google Play Billing retains payment history per their policies (minimum 7 years for tax compliance)</li>
             <li><strong>Voice Recordings:</strong> Processed in real-time and immediately deleted (0 retention)</li>
             <li><strong>Uploaded Files:</strong> Temporarily stored in memory during processing, deleted immediately after (no permanent storage)</li>
-            <li><strong>IP Location Data:</strong> IP-based location information (country, city) is cached for 24 hours to improve search performance and reduce API calls. After this period, the cached data is automatically deleted. We do not store raw IP addresses in our permanent database.</li>
+            <li><strong>IP Location Data (PRO/PREMIUM only):</strong> For PRO and PREMIUM subscribers using Research Mode, IP-based location information (country, city) is cached for 24 hours to improve search performance and reduce API calls. After this period, the cached data is automatically deleted. We do not store raw IP addresses in our permanent database. FREE plan users are not subject to IP geolocation processing.</li>
         </ul>
         
         <h3>7.2 Data Retention After Account Deletion</h3>
