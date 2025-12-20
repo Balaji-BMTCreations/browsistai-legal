@@ -76,6 +76,7 @@
             <li><strong>Usage Statistics:</strong> Message count per model, image generation count, subscription quota tracking</li>
             <li><strong>Device Technical Data:</strong> Device model, Android OS version, app version, network status</li>
             <li><strong>User Preferences:</strong> Selected AI model, temperature, max tokens, research mode settings (stored in encrypted DataStore)</li>
+            <li><strong>AI Memories:</strong> Information you share with the AI assistant that it chooses to remember for personalization (e.g., your name, preferences, interests, timezone). This is stored on our servers to personalize future conversations. Maximum 20 memories per user, each limited to 500 characters. You can view, modify, or delete these memories at any time by asking the AI to "forget" specific information.</li>
             <li><strong>Session Data:</strong> Last login timestamp, authentication tokens (JWT, expires after 7 days)</li>
             <li><strong>IP Address & Location Data (PRO/PREMIUM only):</strong> When you use Research Mode (available only with PRO or PREMIUM subscription), we automatically collect your IP address to determine your approximate location (country and city) for providing geographically relevant search results. This helps deliver localized content such as regional news, nearby businesses, and location-appropriate search results. IP-based location data is cached temporarily (24 hours) for performance optimization and is not permanently stored in our database.</li>
         </ul>
@@ -127,13 +128,24 @@
         </ul>
         <p>Review Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
         
-        <h3>3.2 General Usage</h3>
+        <h3>3.2 AI Memory & Personalization</h3>
+        <p>Our AI assistant can remember information you share to provide personalized experiences:</p>
+        <ul>
+            <li><strong>What AI Remembers:</strong> When you share personal details (name, preferences, interests, location, job, hobbies), the AI may save this to personalize future conversations</li>
+            <li><strong>Automatic & Transparent:</strong> The AI proactively saves useful context but will indicate when it's remembering something</li>
+            <li><strong>Your Control:</strong> You can ask the AI to "forget" any information, view what it remembers, or request complete memory deletion</li>
+            <li><strong>What's NOT Saved:</strong> Passwords, financial information, health data, or other sensitive information are never saved in AI memories</li>
+            <li><strong>Storage Limits:</strong> Maximum 20 memories per user, each up to 500 characters</li>
+            <li><strong>Deletion:</strong> All AI memories are permanently deleted when you delete your account</li>
+        </ul>
+        
+        <h3>3.3 General Usage</h3>
         <p>We use your information for:</p>
         <ul>
             <li><strong>Service Delivery:</strong> Provide AI chat, image generation, and browser features</li>
             <li><strong>Account Management:</strong> Authenticate users, manage subscriptions</li>
             <li><strong>Usage Tracking:</strong> Monitor quotas, enforce subscription limits</li>
-            <li><strong>Personalization:</strong> Improve user experience based on preferences</li>
+            <li><strong>Personalization:</strong> Improve user experience based on preferences and AI memories</li>
             <li><strong>Analytics:</strong> Understand feature usage, improve app performance</li>
             <li><strong>Support:</strong> Respond to inquiries, troubleshoot issues</li>
             <li><strong>Security:</strong> Prevent fraud, abuse, and unauthorized access</li>
@@ -223,6 +235,7 @@
             <li><strong>Account Data:</strong> Retained while your account is active and for 30 days after account deletion</li>
             <li><strong>Chat History (Local):</strong> Stored on your device until you manually delete conversations</li>
             <li><strong>Chat History (Cloud):</strong> Synced chats stored on MongoDB Atlas, deleted within 30 days of account deletion</li>
+            <li><strong>AI Memories:</strong> Personalization data saved by the AI (stored on MongoDB Atlas), deleted within 30 days of account deletion. You can also delete individual memories anytime by asking the AI to "forget" specific information.</li>
             <li><strong>Usage Statistics:</strong> Message and image counts reset monthly on your billing date</li>
             <li><strong>Server Logs:</strong> Backend API logs retained for 30 days for debugging and security (contains timestamps, endpoints, status codes - NO chat content)</li>
             <li><strong>Payment Records:</strong> Google Play Billing retains payment history per their policies (minimum 7 years for tax compliance)</li>
