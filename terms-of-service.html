@@ -82,7 +82,9 @@
         
         <h3>2.1 Core Features</h3>
         <ul>
-            <li><strong>AI Chat Assistant:</strong> Conversational AI with multiple models (OpenAI GPT-4.1-mini, GPT-4o, GPT-5; Google Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Flash, Gemini 3.1 Pro)</li>
+            <li><strong>AI Chat Assistant:</strong> Conversational AI with multiple models (OpenAI GPT-4.1-mini, GPT-4o, GPT-5; Google Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3 Flash, Gemini 3.1 Pro)</li>
+            <li><strong>AI Voice Chat:</strong> Real-time voice conversations with AI using Google Gemini Live API. Talk naturally and get spoken responses with multiple voice options (Kore, Aoede, Charon, Fenrir, Leda, Orus, Zephyr). Supports hands-free browsing commands — ask the AI to open websites, search the web, get weather, read webpages, and more via voice. Voice sessions consume messages from your plan quota.</li>
+            <li><strong>AI Video Chat:</strong> Live video conversations with AI where you can share your camera feed. The AI can see what you see and answer questions about your surroundings in real time. Supports front/back camera switching, picture-in-picture mode, and fullscreen video. Video sessions consume additional messages from your plan quota.</li>
             <li><strong>Research Mode (PRO/PREMIUM only):</strong> AI chat enhanced with real-time web search, credible sources, and images from the web. Research Mode uses your IP address to determine your approximate location (country and city) to provide geographically relevant search results, including regional news, nearby businesses, and location-appropriate content. This feature requires an active PRO or PREMIUM subscription.</li>
             <li><strong>Built-in Browser:</strong> Integrated web browser for seamless browsing without leaving the app</li>
             <li><strong>Browser AI Summarization:</strong> Instant webpage summaries in 4 types:
@@ -96,7 +98,7 @@
             <li><strong>My Notes:</strong> Personal note-taking and organization system accessible from navigation menu</li>
             <li><strong>AI Image Generation:</strong> Text-to-image creation using Google Imagen and DALL-E models</li>
             <li><strong>Trending Topics:</strong> Discover trending content across categories with instant AI research capabilities</li>
-            <li><strong>Voice Input:</strong> Speech-to-text capabilities for hands-free interaction</li>
+            <li><strong>Voice Input:</strong> Speech-to-text capabilities for hands-free interaction in chat</li>
             <li><strong>Document Analysis:</strong> AI-powered analysis of PDFs, Word documents (up to 10MB), and images</li>
             <li><strong>Multi-Device Sync:</strong> Optional cloud synchronization of chat history across devices</li>
         </ul>
@@ -106,6 +108,7 @@
             <li>Research Mode sources open directly in the built-in browser (PRO/PREMIUM subscribers only)</li>
             <li>Browser AI Summarization accessible via AI icon in browser bottom navigation</li>
             <li>Seamless workflow: Chat to Research to Browse to Summarize to Notes</li>
+            <li>Voice-to-Browser integration: Voice commands can open websites directly in the built-in browser</li>
             <li>Multi-tab browsing with history and bookmarks</li>
         </ul>
         
@@ -127,15 +130,17 @@
             <li><strong>FREE:</strong> ₹0/month (No payment required)
                 <ul>
                     <li>25 messages per month</li>
-                    <li>Budget AI models only: Gemini 2.5 Flash, GPT-4.1-mini</li>
+                    <li>Budget AI models (Gemini 2.5 Flash, GPT-4.1-mini)</li>
                     <li>10 image generations per month</li>
+                    <li>AI Voice Chat (consumes messages from quota)</li>
                     <li>Built-in browser with multi-tab support</li>
                     <li>Browser AI Summarization (all 4 types)</li>
                     <li>My Notes - Personal note-taking</li>
                     <li>Trending Topics discovery</li>
-                    <li>Voice input (speech-to-text)</li>
+                    <li>Voice input (speech-to-text) in chat</li>
                     <li>Local chat history storage</li>
-                    <li>No access to premium models (GPT-4o, GPT-5, Gemini 2.5 Pro, Gemini 3.1 models)</li>
+                    <li>No access to advanced models (GPT-4o, GPT-5, Gemini 2.5 Pro, Gemini 3 Flash, Gemini 3.1 Pro)</li>
+                    <li>No AI Video Chat (PRO/PREMIUM only)</li>
                     <li>No Research Mode (PRO/PREMIUM only)</li>
                     <li>No cloud sync</li>
                 </ul>
@@ -143,17 +148,19 @@
             <li><strong>PRO:</strong> ₹1,950/month (~$23 USD)
                 <ul>
                     <li>3,000 messages per month</li>
-                    <li>Access to advanced AI models: GPT-4.1-mini, GPT-4o, Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Flash</li>
-                    <li>Mix and match any models up to total limit (no per-model restrictions)</li>
+                    <li>All AI models (GPT-4.1-mini, GPT-4o, Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3 Flash)</li>
+                    <li>Mix and match any models up to total limit</li>
                     <li>100 image generations per month (DALL-E, Imagen)</li>
+                    <li>AI Voice Chat with all voice options</li>
+                    <li>AI Video Chat with camera support</li>
+                    <li>Voice-to-Browser commands (open websites, search via voice)</li>
                     <li>Full Research Mode with unlimited web sources and images</li>
                     <li>Built-in browser with AI summarization</li>
                     <li>My Notes with extended storage</li>
                     <li>Trending Topics with instant AI research</li>
                     <li>Document analysis (PDF, Word - up to 10MB)</li>
-                    <li>Cloud sync across devices (MongoDB)</li>
+                    <li>Cloud sync across devices</li>
                     <li>Advanced AI settings (temperature, max tokens)</li>
-                    <li>Voice input with improved accuracy</li>
                     <li>Priority support (response within 24 hours)</li>
                     <li>Ad-free experience</li>
                 </ul>
@@ -161,9 +168,12 @@
             <li><strong>PREMIUM:</strong> ₹4,999/month (~$60 USD)
                 <ul>
                     <li>20,000 messages per month (20x more than PRO)</li>
-                    <li>Access to ALL AI models: GPT-4.1-mini, GPT-4o, GPT-5, Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Flash, Gemini 3.1 Pro</li>
-                    <li>Unrestricted model mixing - use any combination up to 20K total</li>
+                    <li>All AI models (GPT-4.1-mini, GPT-4o, GPT-5, Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3 Flash, Gemini 3.1 Pro)</li>
+                    <li>Unrestricted model mixing up to 20K total</li>
                     <li>500 image generations per month (5x more than PRO)</li>
+                    <li>AI Voice Chat with all voice options and priority</li>
+                    <li>AI Video Chat with front/back camera, fullscreen mode</li>
+                    <li>Voice-to-Browser commands with tool integration</li>
                     <li>Research Mode with unlimited sources and priority processing</li>
                     <li>Built-in browser with advanced AI features</li>
                     <li>My Notes with unlimited storage and AI organization</li>
@@ -174,8 +184,6 @@
                     <li>Advanced AI settings with custom presets</li>
                     <li>24/7 Priority support (response within 2 hours)</li>
                     <li>Early access to beta features</li>
-                    <li>Custom AI model fine-tuning (coming soon)</li>
-                    <li>API access (coming soon)</li>
                 </ul>
             </li>
         </ul>
