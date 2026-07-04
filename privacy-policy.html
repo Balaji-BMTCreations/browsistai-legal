@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: June 14, 2026</p>
+        <p class="last-updated">Last Updated: July 4, 2026</p>
         <p><strong>Effective Date:</strong> December 10, 2025</p>
         <p><em>Version 1.2 - Updated Browser Permissions &amp; Security Features</em></p>
 
@@ -203,6 +203,7 @@
         <ul>
             <li><strong>Serper API / Tavily Search (PRO/PREMIUM only):</strong> When using Research Mode (available only with PRO or PREMIUM subscription), your search queries and approximate location (country and city derived from IP address) are sent to third-party search APIs (Serper, Tavily) to provide geographically relevant web sources and images. Only your query and location parameters (country code, city name) are shared - no personal identifiers are sent. FREE plan users do not have access to Research Mode and their data is not shared with these services.</li>
             <li><strong>IP Geolocation Services (PRO/PREMIUM only):</strong> We use third-party IP geolocation services (ip-api.com, ipapi.co) to determine your approximate location from your IP address when you use Research Mode. These services receive only your IP address and return location data (country, city, region). This only applies to PRO and PREMIUM subscribers using Research Mode. See their privacy policies: <a href="https://ip-api.com/docs/legal" target="_blank">ip-api.com</a>, <a href="https://ipapi.co/privacy" target="_blank">ipapi.co</a></li>
+            <li><strong>Search &amp; Geolocation for On-Device AI web tools (Offline AI Pack only):</strong> When an on-device model uses its web tools, search queries and page requests go directly from your device to <a href="https://duckduckgo.com/privacy" target="_blank">DuckDuckGo</a> / <a href="https://www.mojeek.com/about/privacy/" target="_blank">Mojeek</a>, and your public IP is sent to <a href="https://ipwho.is/" target="_blank">ipwho.is</a> to estimate approximate location. These requests do not pass through our servers, and we do not receive or store them. See Section 4.6 for details.</li>
             <li><strong>Webpage Content Extraction:</strong> For Browser AI Summarization (available to all users), webpage content is extracted and sent to AI providers (OpenAI/Google) for summarization</li>
             <li><strong>Trending Topics API:</strong> Real-time trending topic data fetched from external news and social media APIs (available to all users)</li>
         </ul>
@@ -217,22 +218,27 @@
         </ul>
 
         <h3>4.6 On-Device (Offline) AI &mdash; Optional Add-on</h3>
-        <p>The optional <strong>Offline AI Pack</strong> add-on runs AI models entirely on your device. When you use on-device AI:</p>
+        <p>The optional <strong>Offline AI Pack</strong> add-on runs AI models entirely on your device. The AI itself &mdash; reading your prompt and generating the response &mdash; always happens locally on your phone. When you use on-device AI:</p>
         <ul>
-            <li><strong>Nothing is sent to our servers or to any AI provider.</strong> Your prompts and the AI's responses are processed 100% locally on your phone.</li>
+            <li><strong>Your chat content is never sent to our servers or to any AI provider.</strong> The language model runs 100% locally; your prompts and the AI's responses are processed on your device.</li>
             <li><strong>Offline conversations are stored only on your device</strong> (in the app's local, encrypted Room database) and are never synced to the cloud or our backend.</li>
-            <li>On-device AI does not consume your message quota and works without an internet connection.</li>
-            <li>The only network activity is the one-time model download and a small, authenticated request to verify your add-on subscription &mdash; no chat content is ever involved.</li>
+            <li>On-device AI does not consume your message quota.</li>
             <li>The add-on's active status is verified via your Google Play subscription; this check involves only your subscription state and no chat content.</li>
             <li>You can delete the downloaded model at any time from Settings &rarr; Offline AI Pack.</li>
+        </ul>
+        <p><strong>Optional web access for on-device AI.</strong> Some on-device models can use built-in web tools to answer questions that need current information (for example prices, news, or weather). This feature uses the internet <em>directly from your device</em> &mdash; never through our servers, and never using a paid API. When a web tool runs:</p>
+        <ul>
+            <li>A <strong>search query</strong> (derived from your question) is sent to a public search engine (<a href="https://duckduckgo.com/privacy" target="_blank">DuckDuckGo</a>, with <a href="https://www.mojeek.com/about/privacy/" target="_blank">Mojeek</a> as a fallback), and the resulting web pages are fetched, so the AI can read them. These requests go from your device to those sites directly; we do not receive, log, or store them.</li>
+            <li>To localize answers (for example, giving prices in your country's currency), the app makes a best-effort request to a free IP-geolocation service (<a href="https://ipwho.is/" target="_blank">ipwho.is</a>) to estimate your approximate location (city / region / country) from your device's public IP address. The result is cached on your device for up to 24 hours and is <strong>not</strong> sent to or stored by us. Pure reasoning-only models do not make this request; they infer only your country from your device's locale settings, with no network call.</li>
+            <li>If your device has no internet connection, web tools simply report that they are offline and the AI answers from its own knowledge. On-device chat continues to work without a connection.</li>
+            <li>Pages the AI opens appear as tabs in the in-app browser so you can see exactly what it accessed.</li>
         </ul>
 
         <h3>4.7 On-Device AI Model Licenses</h3>
         <p>The Offline AI Pack uses the following open models, downloaded to your device. Each remains under its own license:</p>
         <ul>
-            <li><strong>Gemma 3 1B</strong> (Google) &mdash; <a href="https://ai.google.dev/gemma/terms" target="_blank">Gemma Terms of Use</a></li>
-            <li><strong>TinyLlama 1.1B</strong> &mdash; <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></li>
-            <li><strong>Qwen2.5 1.5B</strong> (Alibaba) &mdash; <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></li>
+            <li><strong>Gemma 3 1B</strong> and <strong>Gemma 3n E2B / E4B</strong> (Google) &mdash; <a href="https://ai.google.dev/gemma/terms" target="_blank">Gemma Terms of Use</a></li>
+            <li><strong>Qwen3 4B</strong> (Alibaba) &mdash; <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a></li>
             <li><strong>DeepSeek-R1-Distill-Qwen 1.5B</strong> &mdash; <a href="https://opensource.org/license/mit" target="_blank">MIT License</a></li>
         </ul>
 
